@@ -1,0 +1,801 @@
+@font-face {
+  font-family: "MiFuente";
+  src: url("./Fuentes/fonts/ArchivoBlack-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  width: 100%;
+  margin: 0;
+  background: #111111;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+.presentacion {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 89px;
+  margin-left: 120px; /* Margen izquierdo del diseño */
+}
+
+/* 🌟 LA ELIPSE CON GRADIENTE Y DESENFOQUE DE FIGMA */
+.presentacion::before {
+  content: "";
+  position: absolute;
+  top: 240px; /* */
+  right: 207px; /* Se ancla al mismo margen de la foto en vez de un left rígido */
+  width: 300px; /* */
+  height: 300px; /* */
+  border-radius: 50%;
+  background-color: #6d6dff; /* */
+  filter: blur(100px); /* Suavizado ideal para web */
+  z-index: -1;
+  opacity: 0.6;
+}
+
+.presentacion__contenido {
+  display: flex;
+  flex-direction: column;
+}
+
+.nombre {
+  width: 793px;
+  height: 156px;
+  margin: 0px;
+  font-family: ArchivoBlack-Regular, sans-serif;
+  font-size: 72px;
+  font-weight: 400;
+  line-height: 100%;
+  color: #ffffff;
+}
+
+.puesto {
+  width: 790px;
+  height: 25px;
+  margin: 0px;
+  margin-top: 15px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 100%;
+  color: #ffffff;
+  opacity: 0.5;
+}
+
+.descripcion {
+  width: 793px;
+  height: 150px;
+  margin: 0px;
+  margin-top: 30px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 100%;
+  color: #ffffff;
+}
+
+/* Enlaces y Navegación */
+.portfolio__links {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-top: 43px;
+}
+
+.portfolio__link-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Alínea la línea morada al inicio izquierdo de la palabra */
+}
+
+.portfolio__link {
+  color: #ffffff;
+  text-decoration: none;
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  font-style: semi-bold;
+  line-height: 100%;
+}
+
+.portfolio__link:hover {
+  opacity: 0.5;
+}
+
+.linea-morada {
+  width: 115px;
+  height: 5px;
+  margin-top: 5px;
+  background: linear-gradient(90deg, #6d6dff 0%, #4c1a97 100%);
+}
+
+.presentacion__imagen-contenedor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -40px;
+  margin-right: 120px; /* Margen derecho del diseño */
+}
+
+.foto-perfil {
+  width: 387px; /* 📐 Ancho de Figma */
+  height: 500px; /* 📐 Altura de Figma */
+  object-fit: cover; /* Asegura que la foto llene el espacio sin distorsionarse */
+}
+
+.habilidades-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.habilidades__titulo {
+  font-family: ArchivoBlack-Regular, sans-serif;
+  font-size: 40px;
+  font-weight: 400;
+  font-style: normal;
+  color: #ffffff;
+  margin: 0;
+  margin-right: 717px; /* Margen izquierdo del diseño */
+  margin-bottom: 50px; /* Espacio entre el título y los iconos */
+  margin-top: 110px; /* Espacio superior para separar de la sección anterior */
+}
+
+/* Contenedor flex dedicado para que los iconos se queden en línea horizontal */
+.habilidades__iconos {
+  display: flex;
+  flex-direction: row; /* Asegura que los iconos se alineen horizontalmente */
+  gap: 25px; /* Separación horizontal exacta entre tus imágenes */
+  justify-content: space-between; /* Distribuye los iconos a lo largo del contenedor */
+}
+
+.habilidades__imagen-html {
+  height: 57px; /* Ajusta el tamaño de tus iconos para que queden uniformes */
+  width: 50px;
+  object-fit: contain;
+}
+
+.habilidades__imagen-css {
+  height: 57px;
+  width: 50px;
+  object-fit: contain;
+}
+
+.habilidades__imagen-redondo {
+  height: 50px;
+  width: 50px;
+  object-fit: contain;
+}
+
+.habilidades__imagen-redondo-js {
+  height: 50px;
+  width: 50px;
+  border-radius: 30%; /* Hace que la imagen sea redonda */
+  object-fit: contain;
+}
+
+.proyectos-seccion {
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px; /* Espacio superior para separar de la sección anterior */
+  padding: 0 120px; /* Padding horizontal para mantener el margen en ambos lados */
+}
+
+.proyectos__titulo {
+  font-family: ArchivoBlack-Regular, sans-serif;
+  font-size: 40px;
+  font-weight: 400;
+  font-style: normal;
+  color: #ffffff;
+  margin: 0;
+  margin-bottom: 50px; /* Espacio entre el título y los proyectos */
+  width: 487px;
+  height: 44px;
+  margin-right: 833px;
+  margin-left: 120px; /* Margen izquierdo del diseño */
+}
+
+.proyectos__contenedor {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 20px; /* Aplica el espacio de 20px únicamente en los costados */
+}
+
+.proyecto-contenedor-coffee {
+  margin-left: 120px; /* Margen izquierdo del diseño */
+  position: relative;
+}
+
+.proyecto-contenedor-mi_proyecto {
+  position: relative;
+}
+
+.proyecto__imagen {
+  height: 330px; /* Ajusta la altura de la imagen del proyecto */
+  width: 590px; /* Asegura que la imagen ocupe todo el ancho del contenedor */
+  object-fit: cover; /* Asegura que la imagen llene el espacio sin distorsionarse */
+  display: block;
+}
+
+.proyecto__lenguajes-flotantes {
+  position: absolute;
+  display: flex;
+  top: 280px;
+  left: 12px;
+  gap: 10px;
+  z-index: 1;
+}
+
+.proyecto__lenguajes-flotantes-2 {
+  position: absolute;
+  display: flex;
+  top: 280px;
+  left: 12px;
+  gap: 10px;
+  z-index: 1;
+  border: 20%;
+  background-color: none;
+}
+
+.lenguaje-utilizado {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  margin-left: 12px;
+}
+
+.lenguaje-utilizado-mi_proyecto {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  margin-left: 12px;
+  border-radius: 30%;
+}
+
+.proyecto__titulo {
+  font-family: "Open Sans", sans-serif;
+  font-size: 24px;
+  font-weight: 700px;
+  font-style: bold;
+  line-height: 100%;
+  padding: 30px 30px 0 30px;
+  margin: 0;
+}
+
+.proyecto__descripcion {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 100%;
+  width: 530px;
+  height: 175px;
+  margin-top: 20px;
+  padding: 0 30px 0 30px;
+}
+
+.cuadros-descripcion {
+  background-color: #1c1c1c;
+  width: 590px;
+  height: 340px;
+  row-gap: 0;
+  top: auto;
+  margin: 0;
+}
+
+.seccion-demo {
+  margin-left: 30px;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.imagen-demo {
+  width: 132px;
+  height: 22px;
+}
+
+.imagen-demo:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+/* 🌟 LA ELIPSE CON GRADIENTE Y DESENFOQUE DE FIGMA */
+.presentacion::after {
+  content: "";
+  position: absolute;
+  top: 1675px; /* */
+  right: 570px; /* Se ancla al mismo margen de la foto en vez de un left rígido */
+  width: 300px; /* */
+  height: 300px; /* */
+  border-radius: 50%;
+  background-color: #6d6dff; /* */
+  filter: blur(100px); /* Suavizado ideal para web */
+  z-index: -1;
+  opacity: 0.6;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+  text-align: center;
+}
+
+.seccion-footer {
+}
+
+.titulo-footer {
+  font-family: ArchivoBlack-Regular, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 40px;
+  line-height: 100%;
+  color: #ffffff;
+}
+
+.email-footer {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 100%;
+  color: #6d6dff;
+  margin-top: 20px;
+}
+
+.email-footer:hover {
+  opacity: 0.5;
+}
+
+.redes-sociales {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 30px;
+  gap: 80px;
+}
+
+.imagen-redes {
+  width: 24px;
+  height: 24px;
+}
+
+.imagen-redes:hover {
+  opacity: 0.5;
+}
+
+@media screen and (max-width: 768px) {
+  .presentacion {
+    width: calc(100% - 80px);
+    margin-top: 40px;
+    margin-left: 40px; /* Margen izquierdo del diseño */
+    align-items: flex-start;
+  }
+
+  .presentacion__contenido {
+    width: 452px;
+    margin-left: 0px;
+  }
+
+  .nombre {
+    width: 434px;
+    height: 127px;
+    font-size: 58px;
+  }
+
+  .puesto {
+    width: 452px;
+    height: 25px;
+    margin: 0px;
+    margin-top: 14px;
+  }
+
+  .descripcion {
+    width: 452px;
+    height: 276px;
+    margin-top: 20px;
+  }
+
+  .presentacion__imagen-contenedor {
+    margin-top: 0px;
+    padding: auto;
+    margin-right: 40px;
+  }
+
+  .foto-perfil {
+    width: 216px; /* 📐 Ancho de Figma */
+    height: 280px; /* 📐 Altura de Figma */
+  }
+
+  .presentacion::before {
+    content: "";
+    position: absolute;
+    top: 40px; /* */
+    right: 40px; /* Se ancla al mismo margen de la foto en vez de un left rígido */
+    width: 300px; /* */
+    height: 300px; /* */
+    border-radius: 50%;
+    background-color: #6d6dff; /* */
+    filter: blur(100px); /* Suavizado ideal para web */
+    z-index: -1;
+    opacity: 0.6;
+  }
+
+  .portfolio__links {
+    gap: 30px;
+    margin-top: 20px;
+  }
+
+  .habilidades-section {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+  }
+
+  .habilidades__titulo {
+    margin: 80px 0 40px 40px;
+  }
+
+  /* Contenedor flex dedicado para que los iconos se queden en línea horizontal */
+  .habilidades__iconos {
+    display: flex;
+    margin-left: 40px;
+    gap: 78px; /* Separación horizontal exacta entre tus imágenes */
+    justify-content: space-between; /* Distribuye los iconos a lo largo del contenedor */
+    align-items: stretch;
+  }
+
+  .proyectos-seccion {
+    margin: 80px 40px 30px 40px;
+    padding: 0;
+  }
+
+  .proyectos__titulo {
+    width: 487px;
+    margin-left: 0; /* Resetea márgenes izquierdos heredados */
+    margin-right: auto; /* Empuja el espacio sobrante a la derecha para alinearse a la izquierda */
+  }
+
+  .proyectos__contenedor {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .proyecto__imagen {
+    width: 688px;
+    height: 330px;
+  }
+
+  .proyecto-contenedor-coffee {
+    margin-left: 0; /* Margen izquierdo del diseño */
+    position: relative;
+  }
+
+  .cuadros-descripcion {
+    width: 688px;
+    height: 340px;
+  }
+
+  .proyecto-contenedor-mi_proyecto {
+    margin-top: 20px;
+  }
+
+  .proyecto-contenedor-mi_proyecto .cuadros-descripcion {
+    width: 688px;
+    height: 190px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .proyecto-contenedor-mi_proyecto .cuadros-descripcion .seccion-demo {
+    /* Aquí puedes ajustar márgenes o posición para que no quede fuera */
+    margin: 0 0 30px 30px;
+  }
+
+  .seccion-footer {
+    margin-bottom: 102px;
+  }
+
+  .presentacion::after {
+    content: "";
+    position: absolute;
+    top: 2167px; /* */
+    right: 234px;
+    left: 234px; /* Se ancla al mismo margen de la foto en vez de un left rígido */
+    width: 300px; /* */
+    height: 300px; /* */
+    border-radius: 50%;
+    background-color: #6d6dff; /* */
+    filter: blur(100px); /* Suavizado ideal para web */
+    z-index: -1;
+    opacity: 0.6;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .presentacion {
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 40px);
+    margin-top: 20px;
+    margin-left: 20px; /* Margen izquierdo del diseño */
+    align-items: center;
+  }
+
+  .presentacion__contenido {
+    width: 280px;
+    margin-left: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    order: 2;
+  }
+
+  .nombre {
+    width: 280px;
+    height: 78px;
+    font-size: 36px;
+  }
+
+  .puesto {
+    width: 280px;
+    height: 78px;
+    margin-top: 10px;
+  }
+
+  .descripcion {
+    width: 280px;
+    height: 330px;
+    margin-top: 20px;
+  }
+
+  .presentacion__imagen-contenedor {
+    display: flex;
+    justify-content: center;
+    order: 1;
+  }
+
+  .foto-perfil {
+    width: 280px;
+    height: 280px;
+    margin: 20px 0px 30px 20px;
+    object-fit: cover;
+  }
+
+  /* Enlaces y Navegación */
+  .portfolio__links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 30px;
+  }
+
+  .habilidades-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 60px;
+    width: calc(100% - 40px);
+  }
+
+  .habilidades__titulo {
+    font-size: 28px;
+    width: 280px;
+    height: 60px;
+    margin-left: 20px;
+  }
+
+  /* Contenedor flex dedicado para que los iconos se queden en línea horizontal */
+  .habilidades__iconos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-left: 20px;
+    gap: 53px; /* Separación horizontal exacta entre tus imágenes */
+    width: calc(100% - 40px);
+    width: 30px;
+    height: 34.2px;
+    margin-bottom: 59.8px;
+  }
+
+  .habilidades__imagen-html {
+    height: 34.2px; /* Ajusta el tamaño de tus iconos para que queden uniformes */
+    width: 30px;
+    object-fit: contain;
+  }
+
+  .habilidades__imagen-css {
+    height: 34.2px;
+    width: 30px;
+    object-fit: contain;
+  }
+
+  .habilidades__imagen-redondo {
+    height: 30px;
+    width: 30px;
+    object-fit: contain;
+  }
+
+  .habilidades__imagen-redondo-js {
+    height: 30px;
+    width: 30px;
+    border-radius: 30%; /* Hace que la imagen sea redonda */
+    object-fit: contain;
+  }
+
+  .proyectos-seccion {
+    margin: 59.8px 20px 30px 20px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .proyectos__titulo {
+    width: 280px;
+    height: 60px;
+    margin: 0;
+    font-size: 28px;
+  }
+
+  .proyectos__contenedor {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-left: 0px;
+  }
+
+  .proyecto__imagen {
+    width: 280px;
+    height: 160px;
+    object-fit: cover;
+  }
+
+  .proyecto-contenedor-coffee {
+    margin-left: 0; /* Margen izquierdo del diseño */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+  .cuadros-descripcion {
+    width: 280px;
+    height: 454px;
+    margin-top: 0px;
+  }
+
+  .cuadros-descripcion:nth-child(2) {
+    margin-top: 10px;
+  }
+
+  .proyecto__titulo {
+    font-size: 20px;
+    padding: 20px 0px 0 20px;
+    margin: 0;
+  }
+
+  .proyecto__descripcion {
+    font-size: 16px;
+    font-weight: 400;
+    width: 240px;
+    height: 308px;
+    margin-top: 10px;
+    padding: 0 20px 0 20px;
+  }
+
+  .proyecto-contenedor-mi_proyecto {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .seccion-demo {
+    margin-left: 20px;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0px;
+  }
+
+  .seccion-demo-imagenes {
+    display: flex;
+    flex-direction: row; /* Asegura la fila horizontal */
+    align-items: center;
+    gap: 20px; /* Separación entre los dos bloques */
+  }
+
+  .seccion-demo .seccion-demo-imagenes .imagen-demo:nth-child(2) {
+    width: 83px;
+    height: 22px;
+  }
+
+  .proyecto-contenedor-mi_proyecto .cuadros-descripcion {
+    width: 280px;
+    height: 190px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .proyecto-contenedor-mi_proyecto .cuadros-descripcion .seccion-demo {
+    /* Aquí puedes ajustar márgenes o posición para que no quede fuera */
+    margin: 0 0 20px 20px;
+  }
+
+  .proyecto__lenguajes-flotantes {
+    position: absolute;
+    display: flex;
+    top: 130px;
+    left: 10px;
+    gap: 5px;
+    z-index: 1;
+  }
+
+  .proyecto__lenguajes-flotantes-2 {
+    position: absolute;
+    display: flex;
+    top: 130px;
+    left: 10px;
+    gap: 5px;
+    z-index: 1;
+    border: 20%;
+    background-color: none;
+  }
+
+  .lenguaje-utilizado {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    margin-left: 0px;
+  }
+
+  .lenguaje-utilizado-mi_proyecto {
+    width: 20px;
+    height: 20px;
+    object-fit: cover;
+    margin-left: 0px;
+    border-radius: 30%;
+  }
+
+  .presentacion::after {
+    content: "";
+    position: absolute;
+    top: 2296px; /* */
+    right: 10px;
+    left: 10px; /* Se ancla al mismo margen de la foto en vez de un left rígido */
+    width: 300px; /* */
+    height: 300px; /* */
+    border-radius: 50%;
+    background-color: #6d6dff; /* */
+    filter: blur(100px); /* Suavizado ideal para web */
+    z-index: -1;
+    opacity: 0.6;
+  }
+
+  .seccion-footer {
+    margin-bottom: 100px;
+  }
+
+  .titulo-footer {
+    font-size: 28px;
+  }
+
+  .redes-sociales {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 30px;
+    gap: 40px;
+  }
+}
